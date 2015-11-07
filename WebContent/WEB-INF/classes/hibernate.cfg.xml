@@ -1,0 +1,42 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	<!-- Usuario do banco de dados -->
+		<property name="hibernate.connection.username">postgres</property>
+		
+		<!-- Senha do banco de dados --> 
+		<property name="hibernate.connection.password">root</property>
+		
+		<!-- Chamada de URL ou string de conexao -->
+		<property name="hibernate.connection.url">
+			jdbc:postgresql://localhost:5432/comude
+		</property>
+		
+		
+		
+		
+		<!-- Driver que deve ser utilizado -->
+		<property name="hibernate.connection.driver_class">
+			org.postgresql.Driver</property>
+			
+
+		<!-- Dialeto para comunicação com o banco de dados -->
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.PostgreSQLDialect</property>
+
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+
+		<!-- todas as propriedades configuradas anteriormente -->
+
+		<!-- entidades -->
+
+		<mapping class="br.com.caelum.vraptor.blank.Produto" />
+
+	</session-factory>
+</hibernate-configuration>
+
